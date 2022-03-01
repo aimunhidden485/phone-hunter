@@ -13,24 +13,29 @@ const loadPhones = () =>{
 const displayPhones = phones =>{
     const phoneContainer = document.getElementById('phone-container')
     phoneContainer.textContent = ''
-    phones.forEach (phone =>{
-        const div = document.createElement('div')
-       div.innerHTML= `
-  <div class="col">
-    <div class="card phone-card">
-      <img src="${phone.image}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">${phone.brand}</h5>
-        <p class="card-text">${phone.phone_name}</p>
-        <button onclick="detailsLoaded('${phone.slug}')" class = "search-button">Details</button>
-      </div>
+    if(!phones){
+      console.log('sorry')
+    }
+   const cut =phones.slice(0, 20)
+    cut.forEach (phone =>{
+      const div = document.createElement('div')
+     div.innerHTML= `
+<div class="col">
+  <div class="card phone-card">
+    <img src="${phone.image}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">${phone.brand}</h5>
+      <p class="card-text">${phone.phone_name}</p>
+      <button onclick="detailsLoaded('${phone.slug}')" class = "search-button">Details</button>
     </div>
   </div>
-  `
-        console.log(phone)
-        phoneContainer.appendChild(div)
-    })
-}
+</div>
+`
+      console.log(phone)
+      phoneContainer.appendChild(div)
+  })
+   }
+
 
 // phone details loaded---------------------------
 const detailsLoaded = details =>{
@@ -53,6 +58,8 @@ div.innerHTML= `<div class="card details-card">
  
   <p class="card-text">${data.releaseDate ? data.releaseDate: 'no realease date found'}</p>
   <p class="card-text"><span>Main Features:</span> ${data.mainFeatures.storage}, ${data.mainFeatures.displaySize}, ${data.mainFeatures.chipset}, ${data.mainFeatures.memory}</p>
+  <p class="card-text"><span>Sensors:</span> ${data.mainFeatures.sensors}</p>
+  <p class="card-text"><span>Others:</span> ${data.others.USB}, ${data.others.WLAN}</p>
   
 </div>`
  phoneDetails.appendChild(div)
