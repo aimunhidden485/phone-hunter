@@ -13,13 +13,14 @@ const loadPhones = () =>{
 const displayPhones = phones =>{
     const phoneContainer = document.getElementById('phone-container')
     phoneContainer.textContent = ''
-    if (!phones) {
+    console.log(!phones)
+    if (phones == false) {
       document.getElementById('error-msg').style.display = 'block'
-      console.log('sorry')
+      
     }
     else {
       document.getElementById('error-msg').style.display = 'none'
-     
+      
     }
     
    const cut =phones.slice(0, 20)
