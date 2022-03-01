@@ -12,14 +12,30 @@ body{
     border: none;
     border-radius: 3px;
 }
+.phone-section{
+    justify-content: space-between;
+}
 .phone-card{
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 10px;
+    margin: 10px;
+box-shadow: 10px 10px 30px grey;
 }
 .phone-card img{
     border-radius: 20px;
+   
     
 }
 .details-card{
-    
+   padding: 20px;
+   border-radius: 20px;
+   margin-left: 30px;
+   margin-right: 20px;
+}
+.details-card img{
+    width: 150px;
+}
+
+span{
+    font-weight: 700;
 }

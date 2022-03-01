@@ -47,7 +47,7 @@ const displayDetails = data =>{
   console.log(data)
   const div = document.createElement('div')
 div.innerHTML= `<div class="card details-card">
-<img width="100px" src="${data.image}" class="card-img-top" alt="...">
+<img src="${data.image}" class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">${data.name}</h5>
  
