@@ -2,9 +2,24 @@
 /* font added--------------------------- */
 body{
     background-color:  #DDDDDD;
+    
+    color: rgb(56, 55, 55);
+
 }
 .search-button{
     background-color: #F47340;
     color: white;
     border: none;
+    border-radius: 3px;
+}
+.phone-card{
+    border-radius: 30px;
+    padding: 10px;
+}
+.phone-card img{
+    border-radius: 20px;
+    
+}
+.details-card{
+    
 }
