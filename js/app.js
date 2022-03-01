@@ -13,9 +13,15 @@ const loadPhones = () =>{
 const displayPhones = phones =>{
     const phoneContainer = document.getElementById('phone-container')
     phoneContainer.textContent = ''
-    if(!phones){
+    if (!phones) {
+      document.getElementById('error-msg').style.display = 'block'
       console.log('sorry')
     }
+    else {
+      document.getElementById('error-msg').style.display = 'none'
+     
+    }
+    
    const cut =phones.slice(0, 20)
     cut.forEach (phone =>{
       const div = document.createElement('div')

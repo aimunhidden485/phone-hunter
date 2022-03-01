@@ -6,6 +6,12 @@ body{
     color: rgb(56, 55, 55);
 
 }
+.find{
+    color: #EF2F88;
+}
+.phone{
+    color: #8843F2;
+}
 .search-button{
     background-color: #F47340;
     color: white;
