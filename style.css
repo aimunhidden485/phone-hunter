@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Josefin+Sans:wght@500;700&family=Lobster&family=Merriweather&family=Mochiy+Pop+P+One&family=Poppins:wght@600&family=Redressed&family=Roboto+Serif&display=swap');
+/* font added--------------------------- */
+body{
+    background-color:  #DDDDDD;
+}
+.search-button{
+    background-color: #F47340;
+    color: white;
+    border: none;
+}
